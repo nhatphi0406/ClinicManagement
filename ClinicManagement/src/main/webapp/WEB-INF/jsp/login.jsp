@@ -14,6 +14,12 @@
     </div>
 </c:if>
 
+<c:if test="${param.accessDenied != null}">
+    <div class="alert alert-danger">
+        Da co loi xay ra! Vui long quay lai sau!!!
+    </div>
+</c:if>
+
 
 <c:url value="/login" var="action" />
 

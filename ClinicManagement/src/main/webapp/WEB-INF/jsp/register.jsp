@@ -33,6 +33,10 @@
         <form:input type="email" id="email" path="email" class="form-control" />
     </div>
     <div class="form-group">
+        <label for="phone">Phone</label>
+        <form:input type="number" id="phone" path="phone" class="form-control" />
+    </div>
+    <div class="form-group">
         <label for="username">Username</label>
         <form:input type="text" id="username" path="username" class="form-control" />
     </div>
@@ -43,10 +47,6 @@
     <div class="form-group">
         <label for="confirm-password">Confirm Password</label>
         <form:input type="password" id="confirm-password" path="confirmPassword" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="avatar">Avatar</label>
-        <form:input type="file" id="avatar" path="file" class="form-control" />
     </div>
     <div class="form-group">
         <input type="submit" value="DANG KY" class="btn btn-danger" />

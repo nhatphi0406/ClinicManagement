@@ -61,7 +61,7 @@ public class Product implements Serializable {
     private String description;
     @Column(name = "price")
     private Long price;
-    @Size(max = 100)
+    @Size(max = 255)
     @Column(name = "image")
     private String image;
     @Column(name = "created_date")

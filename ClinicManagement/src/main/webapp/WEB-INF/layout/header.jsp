@@ -5,7 +5,9 @@
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
     <a class="navbar-brand" href="/">CLINIC MANAGEMENT</a>
@@ -51,6 +53,11 @@
                     </a>
                 </li>
             </c:if>
+            <sec:authorize access="hasRole('ROLE_ADMIN')">
+                <li>
+                    <a href="<c:url value="/admin/products"/>" class="nav-link text-danger">Quan ly thuoc</a>
+                </li>
+            </sec:authorize> 
         </ul>
     </div>
 </nav>
