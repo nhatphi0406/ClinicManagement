@@ -57,6 +57,9 @@
                 <li>
                     <a href="<c:url value="/admin/products"/>" class="nav-link text-danger">Quan ly thuoc</a>
                 </li>
+                <li>
+                    <a href="<c:url value="/admin/staff"/>" class="nav-link text-danger">Quan nhan vien</a>
+                </li>
             </sec:authorize> 
         </ul>
     </div>

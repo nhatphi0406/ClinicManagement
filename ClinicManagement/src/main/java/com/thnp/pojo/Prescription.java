@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Prescription.findById", query = "SELECT p FROM Prescription p WHERE p.id = :id"),
     @NamedQuery(name = "Prescription.findByAmount", query = "SELECT p FROM Prescription p WHERE p.amount = :amount"),
     @NamedQuery(name = "Prescription.findByCreatedDate", query = "SELECT p FROM Prescription p WHERE p.createdDate = :createdDate"),
-    @NamedQuery(name = "Prescription.findByResul", query = "SELECT p FROM Prescription p WHERE p.resul = :resul"),
+    @NamedQuery(name = "Prescription.findByResult", query = "SELECT p FROM Prescription p WHERE p.result = :result"),
     @NamedQuery(name = "Prescription.findByPayment", query = "SELECT p FROM Prescription p WHERE p.payment = :payment")})
 public class Prescription implements Serializable {
 
@@ -57,8 +57,8 @@ public class Prescription implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
     @Size(max = 255)
-    @Column(name = "resul")
-    private String resul;
+    @Column(name = "result")
+    private String result;
     @Column(name = "payment")
     private Boolean payment;
     @JoinColumn(name = "book_id", referencedColumnName = "id")
@@ -109,12 +109,12 @@ public class Prescription implements Serializable {
         this.createdDate = createdDate;
     }
 
-    public String getResul() {
-        return resul;
+    public String getResult() {
+        return result;
     }
 
-    public void setResul(String resul) {
-        this.resul = resul;
+    public void setResult(String result) {
+        this.result = result;
     }
 
     public Boolean getPayment() {

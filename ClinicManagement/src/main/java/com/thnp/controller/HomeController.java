@@ -24,15 +24,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 @ControllerAdvice
 public class HomeController {
     
-    @Autowired
-    private CategoryService categoryService;
+//    @Autowired
+//    private CategoryService categoryService;
 //    @Autowired
 //    private ProductService productService;
     
-    @ModelAttribute
-    public void commonAttrs(Model model) {
-        model.addAttribute("categories", this.categoryService.getCategories());
-    }
+//    @ModelAttribute
+//    public void commonAttrs(Model model) {
+//        model.addAttribute("categories", this.categoryService.getCategories());
+//    }
     
     @GetMapping("/")
     public String index() {
