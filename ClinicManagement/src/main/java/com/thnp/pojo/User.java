@@ -91,7 +91,7 @@ public class User implements Serializable {
     @Size(min = 1, max = 20)
     @Column(name = "user_role")
     private String userRole;
-    @Size(max = 100)
+    @Size(max = 255)
     @Column(name = "avata")
     private String avata;
     @OneToMany(mappedBy = "staffId")

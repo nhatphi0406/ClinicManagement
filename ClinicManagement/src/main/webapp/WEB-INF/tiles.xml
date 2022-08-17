@@ -38,5 +38,9 @@ and open the template in the editor.
     <definition name="staff" extends="baseLayout">
         <put-attribute name="title" value="QUAN LY NHAN VIEN" />
         <put-attribute name="content" value="/WEB-INF/jsp/staff.jsp" />
-    </definition>  
+    </definition>
+    <definition name="staff-detail" extends="baseLayout">
+        <put-attribute name="title" value="CHI TIET NHAN VIEN" />
+        <put-attribute name="content" value="/WEB-INF/jsp/staff-detail.jsp" />
+    </definition> 
 </tiles-definitions>

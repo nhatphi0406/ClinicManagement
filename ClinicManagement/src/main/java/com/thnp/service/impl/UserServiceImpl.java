@@ -61,4 +61,24 @@ public class UserServiceImpl implements UserService {
                 u.getUsername(), u.getPassword(), authorities);
     }
 
+    @Override
+    public List<User> getUsers(String kw, int i) {
+        return this.userRepository.getUsers(kw, i);
+    }
+
+    @Override
+    public User getUserById(int userId) {
+        return this.userRepository.getUserById(userId);
+    }
+
+    @Override
+    public long coutStaff() {
+        return this.userRepository.coutStaff();
+    }
+
+    @Override
+    public boolean addOrUpdate(User user) {
+        return false;
+    }
+
 }

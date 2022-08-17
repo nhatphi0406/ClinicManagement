@@ -24,5 +24,10 @@
         <h1>${product.name}</h1>
         <h3 class="text-danger">${product.price} VND</h3>
         <p>${product.description}</p>
+        <sec:authorize access="hasRole('ROLE_DOCTOR')">
+            <div>
+                <input type="button" value="Dat hang" class="btn btn-danger"/>
+            </div>
+        </sec:authorize>
     </div>
 </div>

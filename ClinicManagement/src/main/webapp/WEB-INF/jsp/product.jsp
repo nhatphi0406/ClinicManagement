@@ -25,7 +25,13 @@
                     </c:url>
                     <a class="nav-link" href="${catPath}">${c.name}</a>
                 </li>
-            </c:forEach> 
+            </c:forEach>
+            <li class="nav-item">
+                <a href="<c:url value="/admin/products/prescription" />" class="nav-link text-success">
+                    <i class="fas fa-cart-plus"></i>
+                    <div class="badge badge-danger" >0</div> 
+                </a>
+            </li>
 
         </ul>
         <form class="form-inline" action="<c:url value="/admin/products" />">
@@ -64,6 +70,9 @@
                 <div class="card-body">
                     <h4 class="card-title">${p.name}</h4>
                     <p class="card-text">${p.price} VND</p>
+                    <sec:authorize access="hasRole('ROLE_DOCTOR')">
+                        <a href="#" class="btn btn-primary">Dat hang</a>
+                    </sec:authorize>
                 </div>
             </div>
         </div>

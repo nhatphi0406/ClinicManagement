@@ -14,4 +14,8 @@ import java.util.List;
 public interface UserRepository {
     boolean addUser(User user);
     List<User> getUsers(String username);
+    List<User> getUsers(String kw, int page);
+    User getUserById(int userId);
+    long coutStaff();
+    boolean addOrUpdate(User user);
 }

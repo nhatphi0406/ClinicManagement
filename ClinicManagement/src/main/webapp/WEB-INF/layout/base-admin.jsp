@@ -1,6 +1,6 @@
 <%-- 
-    Document   : base
-    Created on : 26 Jul 2022, 17:10:40
+    Document   : base-admin
+    Created on : 17 Aug 2022, 17:21:58
     Author     : nhatp
 --%>
 
@@ -23,19 +23,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     </head>
     <body>
-        <!-- HEADER -->
-        <tiles:insertAttribute name="header" />
+
         <div class="container">
             
+            <!-- HEADER -->
+            <tiles:insertAttribute name="left" />
+
 
             <!-- CONTENT -->
             <tiles:insertAttribute name="content" />
 
-            
+            <!-- FOOTER -->
+            <tiles:insertAttribute name="footer" />
         </div>
-        <!-- FOOTER -->
-        <tiles:insertAttribute name="footer" />
-        
+
+
         <script src="<c:url value="/js/main.js" />"></script>
     </body>
 </html>
